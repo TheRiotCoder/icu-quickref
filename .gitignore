@@ -1,0 +1,5 @@
+node_modules/
+.wrangler/
+.env
+*.log
+tools/app-build/test/shots/

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <title>ICU QuickRef</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Same policy as _headers (meta copy protects hosts that ignore _headers; frame-ancestors only works as a header). -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; media-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Offline ICU nursing quick reference. Reference aid only. Draft content: not clinically reviewed.">
+  <meta name="theme-color" content="#0a0e14">
+  <meta name="color-scheme" content="dark light">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="ICU QuickRef">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <script src="theme-init.js"></script>
+</head>
+<body>
+  <header class="topbar" id="topbar">
+    <div class="topbar-row">
+      <a class="brand" href="#/"><span class="logo" aria-hidden="true">+</span><span class="brand-txt">ICU QuickRef</span></a>
+      <a class="timerchip" id="timerchip" href="#/tools/timer" hidden>00:00</a>
+      <span class="netdot" id="netdot" role="img" aria-label="Network status"></span>
+      <button class="iconbtn" id="themeBtn" type="button" aria-label="Switch to light mode"><span aria-hidden="true">☀</span></button>
+    </div>
+    <div id="alertbar" class="alertbar" hidden></div>
+    <div id="banners" class="banners"></div>
+  </header>
+
+  <div class="actionbar" id="actionbar" role="toolbar" aria-label="Page actions" hidden></div>
+
+  <main id="app" tabindex="-1"><p class="loading">Loading…</p></main>
+
+  <nav class="tabbar" id="tabbar" aria-label="Main">
+    <a href="#/" data-tab="home"><span class="ti" aria-hidden="true">⌂</span>Home</a>
+    <a href="#/tools" data-tab="tools"><span class="ti" aria-hidden="true">⏱</span>Quick tools</a>
+    <a href="#/about" data-tab="about"><span class="ti" aria-hidden="true">ⓘ</span>About</a>
+  </nav>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="srlive" class="sr" aria-live="assertive"></div>
+
+  <div id="blocker" class="blocker" hidden role="alertdialog" aria-modal="true" aria-labelledby="blocker-h"></div>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-box" role="alertdialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-msg">
+      <h2 id="modal-title" class="sr">Confirm</h2>
+      <p id="modal-msg"></p>
+      <div class="modal-btns">
+        <button type="button" class="abtn" id="modal-cancel">Cancel</button>
+        <button type="button" class="abtn danger" id="modal-ok">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <noscript><p class="noscript">JavaScript is required.</p></noscript>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

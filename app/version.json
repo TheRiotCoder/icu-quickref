@@ -1,0 +1,7 @@
+{
+  "version": "2.0.0",
+  "date": "2026-10-04",
+  "withdrawn": false,
+  "message": "Desktop install fix: remove COOP header; fix SW navigation fetch",
+  "build": "r2"
+}

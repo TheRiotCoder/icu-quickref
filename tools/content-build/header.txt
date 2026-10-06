@@ -1,0 +1,20 @@
+/* =====================================================================
+   ICU QuickRef — ALL CLINICAL CONTENT LIVES IN THIS FILE (schema v2).
+   REFERENCE AID ONLY. NOT YET CLINICALLY REVIEWED. Must be reviewed by a
+   clinical educator, ICU medical director and pharmacist and adapted to
+   facility protocol before clinical use. Content change log:
+   CHANGELOG-content.md.
+   Schema v2 (per condition):
+     id, name, category, emergency (boolean), keywords (array of search
+     synonyms/abbreviations), warnings (array of HIGH-ALERT callouts),
+     glance[3], recognize[], actions[{id,t,s}], monitor[{id,t,s}],
+     meds[], escalate[].
+     s (scope tag): "RN"    = nurse may do independently / standard nursing protocol
+                    "ORDER" = requires provider order or active standing protocol
+                    "PROV"  = provider-performed; text starts "Anticipate/assist:"
+     A text (t or string) starting with "!" = CALL / ESCALATE step.
+   Dose policy: no numeric doses/rates for infusions or high-alert drugs
+   (drug/class + "per order/facility protocol"). Bolus reference doses are
+   typical adult published doses, given only if ordered / per protocol.
+   After editing: bump version/date + meta, and CACHE_VERSION in sw.js.
+   ===================================================================== */
