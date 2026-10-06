@@ -1,10 +1,13 @@
 # ICU QuickRef
 
+**Live app: [icu-quickref.pages.dev](https://icu-quickref.pages.dev)**
+
+Install it on a phone from the browser: on iPhone, open the link in Safari and tap Share, then Add to Home Screen. On Android, open it in Chrome and tap Install app.
+
 Offline-capable quick-reference web app (PWA) for ICU nurses: disease processes and the steps to follow, built for fast use on the job. Installs on iPhone and Android from the browser.
 
 **Status: NOT YET CLINICALLY REVIEWED.** Reference aid only, not a substitute for provider orders, facility protocol, or clinical judgment.
 
-Live: https://icu-quickref.pages.dev
 
 ## Layout
 - `app/` — the deployable site (static files; see `app/README.md` and `app/CHANGELOG-content.md`)
